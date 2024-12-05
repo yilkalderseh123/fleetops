@@ -12,5 +12,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Create Pull Request
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           gh pr create --base main --head main --repo yilkalderseh123/fleetops
